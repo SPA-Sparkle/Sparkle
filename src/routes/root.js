@@ -16,6 +16,9 @@ export default function Root() {
               <li>
                 <Link to="GameResult">GameResult</Link>
               </li>
+              <li>
+                <Link to="Chat">Chat</Link>
+              </li>
             </ul>
           </div>
         </nav>
