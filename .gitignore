@@ -22,3 +22,4 @@ yarn-error.log*
 
 # Ignore node_modules directory
 node_modules/
+.env
