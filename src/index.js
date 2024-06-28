@@ -14,24 +14,24 @@ import { AuthProvider } from './pages/sign/provider/AuthProvider';  // AuthProvi
 
 export const router = createBrowserRouter([
   {
-    path: "/Sparkle",
+    path: "/",
     element: <Root />,
     children: [
       {
-        path: "Sparkle/Chat",  
+        path: "Chat",  
         element: <Chat />,  // Chat 페이지 라우트 추가
       },
       {
-        path: "Sparkle/SignUp",  
+        path: "SignUp",  
         element: <SignUp />,  
       },
       {
-        path: "Sparkle/SignIn",  
+        path: "SignIn",  
         element: <SignIn />,  
       },
     ],
   },
-]);
+],{ basename: process.env.PUBLIC_URL });
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
