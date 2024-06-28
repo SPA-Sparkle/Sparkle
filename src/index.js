@@ -14,21 +14,19 @@ import { AuthProvider } from './pages/sign/provider/AuthProvider';  // AuthProvi
 
 export const router = createBrowserRouter([
   {
-    path: "/",
-    element: <Root />,
     path: "/Sparkle",
     element: <Root />,
     children: [
       {
-        path: "Chat",  
+        path: "Sparkle/Chat",  
         element: <Chat />,  // Chat 페이지 라우트 추가
       },
       {
-        path: "SignUp",  
+        path: "Sparkle/SignUp",  
         element: <SignUp />,  
       },
       {
-        path: "SignIn",  
+        path: "Sparkle/SignIn",  
         element: <SignIn />,  
       },
     ],
