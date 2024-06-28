@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import Inputform from '../Components/InputForm';
+import Inputform from '../Components/Inputform';
 import ChatWindow from '../Components/ChatWindow';
 import ChoiceButtons from '../Components/ChoiceButtons';
 
@@ -77,6 +77,16 @@ const Chat = () => {
         const requestMessages = [systemMessage, ...updatedMessages];
 
         try {
+            // 분기 수가 끝난 경우 종료 메시지를 추가
+            if (!branchingCompleted && updatedMessages.length > parseInt(branchingCount) + 1) {
+                const endRequestMessage = {
+                    role: 'system',
+                    content: "이제 추가로 이야기를 생성하지 말고, 마무리 해줘."
+                };
+                requestMessages.push(endRequestMessage);
+                setBranchingCompleted(true);
+            }
+
             const response = await axios.post('https://api.openai.com/v1/chat/completions', {
                 model: "gpt-4o",
                 messages: requestMessages,
@@ -98,15 +108,6 @@ const Chat = () => {
 
             setMessages(prevMessages => {
                 const newMessages = [...prevMessages, botMessage];
-                
-                if (!branchingCompleted && newMessages.length > (parseInt(branchingCount) + 1)) {
-                    const endMessage = {
-                        role: 'assistant',
-                        content: "이제 추가로 이야기를 생성하지 말고, 마무리 해줘."
-                    };
-                    setBranchingCompleted(true);
-                    return [...newMessages, endMessage];
-                }
                 return newMessages;
             });
         } catch (error) {
@@ -143,7 +144,6 @@ const Chat = () => {
                 <>
                     <ChatWindow messages={messages} />
                     <ChoiceButtons handleChoice={handleChoice} />
-                    {/* 추가된 버튼 */}
                     <button onClick={handleDownloadTxt}>Download Chat Log as TXT</button>
                 </>
             )}

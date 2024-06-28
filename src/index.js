@@ -16,6 +16,8 @@ export const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
+    path: "/Sparkle",
+    element: <Root />,
     children: [
       {
         path: "Chat",  
