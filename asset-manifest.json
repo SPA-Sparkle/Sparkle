@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/Sparkle/static/css/main.e5e75c11.css",
+    "main.js": "/Sparkle/static/js/main.abbec1c3.js",
+    "static/js/453.adad6bf2.chunk.js": "/Sparkle/static/js/453.adad6bf2.chunk.js",
+    "static/js/952.fffae9c1.chunk.js": "/Sparkle/static/js/952.fffae9c1.chunk.js",
+    "static/media/Sparkle.jpeg": "/Sparkle/static/media/Sparkle.62f8ea1f7b4abdc24e10.jpeg",
+    "index.html": "/Sparkle/index.html",
+    "main.e5e75c11.css.map": "/Sparkle/static/css/main.e5e75c11.css.map",
+    "main.abbec1c3.js.map": "/Sparkle/static/js/main.abbec1c3.js.map",
+    "453.adad6bf2.chunk.js.map": "/Sparkle/static/js/453.adad6bf2.chunk.js.map",
+    "952.fffae9c1.chunk.js.map": "/Sparkle/static/js/952.fffae9c1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e5e75c11.css",
+    "static/js/main.abbec1c3.js"
+  ]
+}
