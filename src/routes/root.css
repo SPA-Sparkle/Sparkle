@@ -2,8 +2,8 @@
     position: fixed;
     top: 0;
     left: 0; 
-    width: 100%;
-    height: 200px; 
+    width: 220px; /* Adjusted width */
+    height: 100%; /* Full height */
     background-color: #041928;
     color: #fff;
     z-index: 1000;
@@ -30,7 +30,61 @@ li {
     text-align: center;
 }
 
+#header {
+    position: fixed;
+    top: 10px; /* Adjusted top position */
+    right: 10px; /* Adjusted right position */
+    display: flex;
+    gap: 10px;
+}
+
+.auth-button {
+    background-color: #ffffff;
+    color: #041928;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.auth-button a {
+    text-decoration: none;
+    color: #041928;
+}
+
 #detail {
     margin-left: 220px;
     margin-top: 200px;
 }
+.modal {
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 40%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  .profile-button {
+    background: none;
+    border: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+  }
